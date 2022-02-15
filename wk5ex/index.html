@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W5D2 - Tables and Forms</title>
+</head>
+<body>
+    <h1>Basic From demo</h1>
+    <h2>Form w/o Table</h2>
+
+    <form method="" action="">
+        
+        <label for="firstName">First Name:</label>
+        <input type="text" id="email" name="email">
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <br>
+
+        <input type="submit" value="SUBMIT">
+
+
+
+    </form>
+
+
+    <h2>Form w/ Table</h2>
+
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label for="firstname">First Name</label>
+
+                </td>
+                <td>
+                    <input type="text" id="firstname" name="firstname">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email</label>
+
+                </td>
+                <td>
+                    <input type="text" id="email" name="email" placeholder="Enter Your Email" required>
+
+                </td>
+            <tr>
+                <td>
+                    <label for="study">Pick Your Program Study:</label>
+    
+                </td>
+                <td>
+                    <input type="radio" id="study" name="study" value="se">Software Engineering <br>
+                    <input type="radio" id="study" name="study" value="cyb">Cybersecurity <br>
+                    <input type="radio" id="study" name="study" value="und">Undecided <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="vehicles">Pick Your Vehicles</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="vehicle1" value="car">Car <br>
+                    <input type="checkbox" name="vehicle2" value="bike">Bike <br>
+                    <input type="checkbox" name="vehicle3" value="horse">Horse <br>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="date">Date:</label>
+                </td>
+                <td>
+                   <input type="date" id="date" name="date">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="faveColor">Pick Your Fave Color:</label>
+                </td>
+                <td>
+                   <select name="faveColor">
+                       <option value="r">Red</option>
+                       <option value="g">Green</option>
+                       <option value="b">Blue</option>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="comments">Comments:</label>
+                </td>
+                <td>
+                   <textarea name="comments" rows=5 cols=20></textarea>
+                      
+                </td>
+            </tr>
+            
+
+
+
+            </tr>
+            <!--submit button-->
+            <tr>
+                <td> </td>
+                <td>
+                    <input type="submit" value="SUBMit">
+                </td>
+
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
