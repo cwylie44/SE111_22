@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W6 | JS conditions and functions</title>
+</head>
+<body>
+    <h1>W6 | JS conditions and functions</h1>
+    <h3><a href="index.html">Intro Demo</a></h3>
+
+    <script>
+        var preference = prompt(`welcome to goof bruger, hoem of dez nutrs`)
+
+        function checkDining(_preference){
+            console.log(`checkDining()has been reached`)
+        
+            if(_preference.toLowerCase === `yes`){
+                console.log(`take out`)
+                return `take_out`
+            }
+            else{
+                console.log(`dine-in`)
+                return `dine-in`
+            }
+        
+        }
+        var dining= checkDining(preference)
+        console.log(dining)
+
+        var order= prompt(`thank you fpr ur prder ${dining} decision/n 
+        what do u want hamburger/n1 shake/n2 fries/n3`)
+        //console.log(_preference)
+        console.log(order)
+
+        function foodOrDrink(_order){
+            if(_order<3){
+                return `you want some food`
+            }
+            else if(_order ===3){
+                return `milshake`
+            }
+            else{
+        return `not valid`
+            }
+        }
+alert(`your choice: ${foodOrDrink(Number(order))}`)
+function calcPriceWithTax(_price, _tax){
+    var newPrice= _price + (_price * (_tax/100))
+    return _price + (_price * (_tax/100))
+}
+
+function getItem(_order){
+    if(_order === `1`){
+        return `hamburg`
+    }
+    else if(_order === `2`){
+        return `fries`
+    }
+    else if(_order === `3`){
+    return `milk shpok`
+    }
+    else{
+        return `nothing`
+    }
+}
+
+var item= getItem(order)
+console.log(item)
+
+function getTotal(_item, _tax){
+    switch(_item){
+        case `burger`:
+            return calcPriceWithTax(3.00, _tax)
+            break;
+        case `fries`:
+            return calcPriceWithTax(1.00, _tax)
+            break;
+        case `milkshake`: 
+            return calcPriceWithTax(5.00, _tax)
+            break;
+        case `nothing`: 
+            return calcPriceWithTax(0.00, _tax)
+            break;
+    }
+}
+
+var total= getTotal(item, 20)
+console.log(`The total price for a ${item} with tax is $${total.toFixed(2)}`)
+
+
+
+    </script>
+</body>
+</html>
