@@ -107,12 +107,12 @@
 
         //selecting the body element
         var body = document.querySelector(`body`)
-
+        
         //creating a new variable to hold new HTML elements
         var newP = ``
         newP += `<p>`
         newP += `hello world! this content was added to the page using Javascript!`
-        newP += `</p>`
+        newP += `</p>` //close
         
         //adding new HTML element info to the end of the body element
         body.innerHTML += newP
@@ -121,7 +121,8 @@
         document.querySelector(`#enter-button`).addEventListener(`click`, alertInfo)
 
        //event specific function: requires the 'e' parameter to hold event data
-        function alertInfo(e) {
+        function alertInfo(e) 
+        {
 
             //local variables: their value only exists inside of alertInfo()
             var fname = document.querySelector(`#first`).value
@@ -137,13 +138,13 @@
 
             var full = fname + ` ` + lname
 
-            alert(`Hi there, ${full}!`)
+            alert(`Hi there, ${full} and you are ${age}`)
 
             var hello = document.querySelector(`#hello`)
 
             //change the hello (#hello element in html) to say hi to the user
 
-            hello.innerHTML += ` ${full}!`
+            hello.innerHTML += ` there ${full}!`
 
             //store HTMl element #info into the var info to use
             var info = document.querySelector(`#info`)
@@ -176,16 +177,17 @@
         {
 
             me.style.color = "red"
+            me.style.fontSize = `36px`
             console.log(`clicked reached`)
             
         }
 
-        you.addEventListener(`click`, greenclick)
+        you.addEventListener(`click`, greenclicked)
 
-        function greenclick(e) 
+        function greenclicked(e) 
         {
             you.style.color = "green"
-            console.log(`greenclick reached`)
+            console.log(`greenclicked reached`)
         }
 
         //selecting another button on the page
@@ -197,7 +199,7 @@
             //checking out the event parameter 
             console.log(event)
         }//anonymouse function close
-        )
+        )//addeventlistener close
     </script>
     
 </body>
