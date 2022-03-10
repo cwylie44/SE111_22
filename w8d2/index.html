@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="output">
+
+</div>
+
+    <script>
+        var people= [
+        'Katie',
+        'conner',
+        'zach',
+        'stephen',
+        'cody',
+        'amara',
+        'olivia'
+        ]
+
+        console.log(people)
+        console.log(people[3])
+        console.log(`there are ${people.length} values in the people array.`)
+
+        var newArray = []
+
+        people[7] = `Rimsha`
+
+        people.push(`mike`)
+
+        var name = `james`
+        people.push(name)
+
+        console.log(people)
+
+        var colors= [
+            `grey`,
+            `blue`,
+            `red`,
+            `green`,
+            `black`,
+            `turquoise`,
+            `n/a`,
+            `n/a`,
+            `n/a`
+        ]
+        console.log(`${people[5]}'s favorite color is ${colors[5]}`)
+
+        for(let index= 0; index < people.length; index++)
+        {
+            console.log(`#${index} : ${people[index]}'s favorite color is ${colors[index]}`)
+            classHTML.push(`SE111.22`)
+
+        }
+        var associativePeople = []
+        associativePeople[`teacher`] = `katie`
+        associativePeople[`student`] = `conner`
+
+        var cars= []
+        cars[0] = [`Make`, `ford`, `chevy`, `toyota`, `honda`]
+        cars[1] = [`models`, `f150`, `cavalier`, `camry`, `prelude`]
+        cars[2] = [`years`, `2016`, `2006`, `1999`, `1994`]
+        console.log(`kts favorite car ${cars[1][4]}`)
+
+
+        var person1 = {
+            first: `katie`,
+            last: `truchon`,
+            age: 32,
+            hasPets: true,
+            classes: [`se111`, `VGD129`, `GMW251`],
+            pets: {dogs: [`George`, `Marlowe`], cats: [`jack`], birds: []},
+            greeting: function(){alert(`hi there ${this.first} ${this.last}`)}
+        }
+    
+
+        console.log(person1)
+        console.log(person1.first)
+        console.log(person1.classes[0])
+        console.log(person1.pets.dogs[0])
+
+        person1.father = `marty`
+        console.log(person1)
+        person1.pets.birds.push(`tweetie`)
+        console.log(person1.pets.birds)
+
+        person1.greeting()
+
+        var person2 = {
+            first: `antuine`,
+            last: `bruh`,
+            age: 34,
+            hasPets: true,
+            classes: [`se111`],
+            pets: {dogs: [], cats: [`tard`], birds: []},
+            greeting: function(){alert(`hi there ${this.first} ${this.last}`)}
+        }
+
+        person2.greeting()
+
+        for(let key in person1){
+        {console.log(`${key}: ${person1[key]}`)
+        }
+
+        var humans = [
+            person1,
+
+            person2
+        ]
+
+        var person3 = {
+            first: `cam`,
+            last: `ruh`,
+            age: 28,
+            hasPets: true,
+            classes: [`se111`],
+            pets: {dogs: [`bruh`, `bruh2`], cats: [], birds: []},
+            greeting: function(){alert(`hi there ${this.first} ${this.last}`)}
+        }
+
+        humans.push(person3)
+
+        var output=``
+
+        for(let i=0; i < humans.length; i++)
+        {
+            output+= `info for ${humans[i].first}:`
+
+            for(let key in humans[i])
+            {
+                output += `<p>${key,toUpperCase()}: ${humans[i][key]}</p>`
+            }
+
+            output += `<hr>`
+        }
+
+    </script>
+</body>
+</html>
